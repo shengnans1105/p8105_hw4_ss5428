@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "---\ntitle: \"Problem_1\"\nauthor: \"Shengnan Sun\"\ndate: \"2017-10-23\"\noutput: html_document\n---\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\n```\n\n",
+    "contents" : "---\ntitle: \"Problem_1\"\nauthor: \"Shengnan Sun\"\ndate: \"2017-10-23\"\noutput: html_document\n---\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\n```\n\n```{r}\n\n```\n\n",
     "created" : 1508793489156.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2232461535",
+    "hash" : "889864824",
     "id" : "25077F8A",
-    "lastKnownWriteTime" : 1508794097,
-    "last_content_update" : 1508794097091,
+    "lastKnownWriteTime" : 1508806836,
+    "last_content_update" : 1508806836,
     "path" : "~/Desktop/DSI/homework/p8105_hw4_ss5428/problem_1.Rmd",
     "project_path" : "problem_1.Rmd",
     "properties" : {
