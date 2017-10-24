@@ -124,7 +124,36 @@ $(document).ready(function () {
 </div>
 
 
-
+<pre class="r"><code>#embedding plots in rmarkdown
+knitr::opts_chunk$set(
+  fig.width = 8,
+  fig.asp = 1,
+  out.width = &quot;120%&quot;
+)</code></pre>
+<pre class="r"><code>library(knitr)
+library(tidyverse)</code></pre>
+<pre><code>## Loading tidyverse: ggplot2
+## Loading tidyverse: tibble
+## Loading tidyverse: tidyr
+## Loading tidyverse: readr
+## Loading tidyverse: purrr
+## Loading tidyverse: dplyr</code></pre>
+<pre><code>## Conflicts with tidy packages ----------------------------------------------</code></pre>
+<pre><code>## filter(): dplyr, stats
+## lag():    dplyr, stats</code></pre>
+<pre class="r"><code>library(ggridges)
+library(ggthemes)
+library(haven)
+library(readxl)
+library(janitor)</code></pre>
+<div id="problem-1" class="section level2">
+<h2>Problem 1</h2>
+<pre class="r"><code>pup_data = read_csv(&quot;FAS_pups.csv&quot;, col_types = &quot;ciiiii&quot;) %&gt;% # load data
+  clean_names() %&gt;% # clean column names
+  mutate(sex = recode(sex, `1` = &quot;male&quot;, `2` = &quot;female&quot;)) %&gt;% # recode sex as male and female
+  gather(key = landmarks, value = PD_outcome, pd_ears:pd_walk) %&gt;% # reshape from wide to long 
+  filter(!is.na(PD_outcome)) # remove the rows where PD_outcome is NA</code></pre>
+</div>
 
 
 
