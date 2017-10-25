@@ -34,3 +34,13 @@ pup_data = read_csv("FAS_pups.csv", col_types = "ciiiii") %>% # load data
   filter(!is.na(PD_outcome)) # remove the rows where PD_outcome is NA
 ```
 
+```{r make a plot}
+ggplot(pup_data, aes(x = PD_outcome, y = landmarks)) + 
+  geom_density_ridges(scale = .85) +
+  labs(title = "Distribution of post-natal days/landmark",
+    x = "PD_outcome",
+    y = "landmarks") + 
+    theme(text = element_text(size = 15))
+```
+
+The ridge plot above shows the distribution of post-natal days for the landmarks of "pd_ears", "pd_eyes", "pd_pivot" and "pd_walk". In general, "Pd_ears" develop earlier than other landmarks, "pd_eyes" develop much later. The development period for "pd_pivot" and "pd_walk" have a significant overlapping.
